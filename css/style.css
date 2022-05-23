@@ -1,0 +1,24 @@
+section{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+}
+article{
+  width:250px;
+  padding:30px;
+  text-align: center;
+}
+
+img, #contentpuntuacio{
+  width:95%;
+}
+#icongoogle{
+  width:30px;
+}
+#contentpuntuacio img{
+  width:20%;
+}
+
+*{
+  font-family: arial;
+}
