@@ -7,18 +7,58 @@ article{
   width:250px;
   padding:30px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-img, #contentpuntuacio{
+article img{
   width:95%;
 }
+
 #icongoogle{
   width:30px;
 }
 #contentpuntuacio img{
-  width:20%;
+  width:15%;
 }
-
 *{
   font-family: arial;
 }
+h2{
+  height: 50px;
+  font-size: 20px;
+  display: flex;/*li faig un display flex en columnes per centrar els texts verticalment*/
+  flex-direction: column;
+  justify-content: center;
+}
+p{
+  margin-top:10px;
+    margin-bottom:5px;
+  }
+
+/*SLIDER fet amb splide*/
+.splide img {
+  width: 100%;
+}
+.caption-display-middle{
+  position:absolute;    /*posem el div en una posició absoluta de manera que no es mogui i quedi per sobre de les imatges de l'slider*/
+  top: 0; bottom: 0; right: 0; left: 0; /*si deixem totes les posicions a 0 respecte el element superior, el li, aquestdiv serà tant gran com la imatge que està dins del li*/
+  /*width: 100%; height: 100%;      això seria una manera alternativa de fer-ho*/
+  background: rgba(0,0,0,0.2);   /* aqui hi ha un quart canal , el alpha , per posar el grau de transparencia*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* li poso capa 1 perque la capa de titol i text, que lhe tret de l'slider perque només vull un h1, estigui per sobre del slider */
+}
+.caption-display-middle h1{
+  color: white;
+  margin:1%; /* li treiem els marges que automaticament porta el h2 */
+  font-size: 70px;
+}
+.caption-display-middle p{
+  color: white;
+  font-size: 30px;
+}
+
+/*FI SLIDER*/

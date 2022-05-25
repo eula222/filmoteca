@@ -1,2 +1,2 @@
 # filmoteca
-exercici de clase
+exercici de clase.

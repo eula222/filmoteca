@@ -29,7 +29,7 @@ for (n=0;n<(5-Math.floor(valorpunt)-mitjaestr);n++){
 
 
 
-document.getElementById("pelis").innerHTML+=("<article class='unapeli'><h2>"+pelis[i]["titol"]+"</h2>"+"<img src='img/covers/"+pelis[i]["image"]+".jpg' alt=''><p>"+pelis[i]["director"]+"</p><p>"+pelis[i]["any"]+" - "+pelis[i]["pais"]+"</p><a href='https://www.google.com/search?q="+pelis[i]["titol"]+" "+pelis[i]["director"]+"' target='_blank'><img id='icongoogle' src='img/icons/google.png' alt=''></a><div id='contentpuntuacio'>"+puntuacioest+"</div></article>");
+document.getElementById("pelis").innerHTML+=("<article class='unapeli'><h2>"+pelis[i]["titol"]+"</h2>"+"<a href='video.html?id="+pelis[i]['id']+"' target='_blank'><img src='img/covers/"+pelis[i]["image"]+".jpg' alt=''></a><p>"+pelis[i]["director"]+"</p><p>"+pelis[i]["any"]+" - "+pelis[i]["pais"]+"</p><a href='https://www.google.com/search?q="+pelis[i]["titol"]+" "+pelis[i]["director"]+"' target='_blank'><img id='icongoogle' src='img/icons/google.png' alt=''></a><div id='contentpuntuacio'>"+puntuacioest+"</div></article>");
 
 
 

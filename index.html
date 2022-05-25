@@ -7,23 +7,48 @@
 	<meta name="keywords" content="Lorem, Ipsum">
 	<meta name="author" content="Lorem Ipsum">
 
+	<link rel="stylesheet" href="css/splide.min.css"> <!-- aquest seria el tema per defecte -->
+
 	<!-- Enllaç a l'arxiu CSS Extern -->
 	<link rel="stylesheet" href="css/style.css" type="text/css"/>
 	<!-- Enllaç a jquery -->
 	<script  type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+	<!-- Enllaç a splide (codi per fer un slider) -->
+	<script src="js/splide.min.js"></script>
+
 	<!-- Enllaç a Javascript Extern -->
 	<script  type="text/javascript" src="js/javascript.js"></script>
+
+	<script>
+	document.addEventListener( 'DOMContentLoaded', function() {
+		var splide = new Splide( '.splide', {
+			type:'loop',autoplay:true, interval:5000 //  https://splidejs.com/guides/options/ el loop es perque despres de la ultima torni a pasar la primera slide, el temps de canviar de slide son milisegons
+		} );
+		splide.mount();
+	} );
+	</script>
 
 	<!-- favicon -->
 	<link href="img/favicon.png" rel="icon" type="image/png" />
 
 	<!-- Títol de la pàgina -->
-	<title>base dades</title>
+	<title>base dades pelis</title>
 </head>
 <body>
-	<header>	<h1>Pel·lícules</h1></header>
+	<header>
+		<section class="splide" aria-label="Splide Basic HTML Example">
+			<div class="caption-display-middle"><h1>Pel·lícules</h1><p>Base de dades de pelis classificades per títol</p></div>
+	  	<div class="splide__track">
+				<ul class="splide__list">
+					<li class="splide__slide"><img src="img/slide/film1.jpg" alt="cine"></li>
+					<li class="splide__slide"><img src="img/slide/film2.jpg" alt="cine"></li>
+					<li class="splide__slide"><img src="img/slide/film3.jpg" alt="cine"></li>
+				</ul>
+	  	</div>
+		</section>
+	</header>
 	<section id="pelis">
-	
 	</section>
 	<footer></footer>
 </body>
