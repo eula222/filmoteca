@@ -33,7 +33,7 @@ h2{
 }
 p{
   margin-top:10px;
-    margin-bottom:5px;
+  margin-bottom:5px;
   }
 
 /*SLIDER fet amb splide*/
@@ -61,4 +61,48 @@ p{
   font-size: 30px;
 }
 
+/* he copiat molts dels atributs d'aquesta pagina de generador de butons https://cssbuttongenerator.com/ */
+.button {
+  margin-top: 20px;
+  font-size:25px;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  width:250px;
+  height:60px;
+  border-width:1px;
+  color:#fff;
+  border-color:#84bbf3;
+  font-weight:bold;
+  border-top-left-radius:6px;
+  border-top-right-radius:6px;
+  border-bottom-left-radius:6px;
+  border-bottom-right-radius:6px;
+  box-shadow:inset 0px 1px 0px 0px #f28510;
+  text-shadow:inset 0px 1px 0px #528ecc;
+  background:linear-gradient(#f28510, #c72e02);
+}
+
+.button:hover {
+  background: linear-gradient(#c72e02, #f28510);
+}
+
 /*FI SLIDER*/
+
+
+/*pagina video*/
+
+/*pagina formulari*/
+#formulari{
+  background-color: #f28510;
+  margin-top:200px;
+  padding: 30px;
+}
+#formulari label{
+    margin-top:20px;
+    font-size: 20px;
+}
+/*com que el input file fa un boto amb text castella, li posem aquest pseudo element per taparho i que sigui en catala*/
+#cover {position: relative; width: 200px; height: 50px; margin-top: 20px;}
+#cover::after {content: 'Pujar fitxer'; width: auto; background-color: #c72e02; color: white; position: absolute; inset: 0 0 0 0; font-size: 16px; font-weight: 700; display: flex; justify-content: center; align-items: center; line-height: 4; border-radius: 4px;}
+#cover:hover::after {background-color: #f99f9f; color: #520505; cursor: pointer;}

@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+	<!-- Informació Meta -->
+	<meta charset="utf-8"/>
+	<meta name="description" content="Lorem Ipsum">
+	<meta name="keywords" content="Lorem, Ipsum">
+	<meta name="author" content="Lorem Ipsum">
+
+	<!-- Enllaç a l'arxiu CSS Extern -->
+	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<!-- Enllaç a jquery -->
+	<script  type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+
+	<!-- Enllaç a Javascript Extern -->
+	<script  type="text/javascript" src="js/javascript.js"></script>
+
+
+
+	<!-- favicon -->
+	<link href="img/favicon.png" rel="icon" type="image/png" />
+
+	<!-- Títol de la pàgina -->
+	<title>base dades pelis</title>
+</head>
+<body>
+	<header>
+
+	</header>
+	<section>
+		<form id="formulari" action="pellicules_add.php" method="POST" enctype="multipart/form-data">   <!-- enctype permet enviar fichers al formulari -->
+			<label>Títol: </label><input type="text" id="titol" name="titol" placeholder="Títol de la pel·lícula"><br>
+			<label>Director: </label><input type="text" id="director" name="director" placeholder="Nom del director de la pel·lícula"><br>
+			<label>Any: </label><input type="number" id="anypeli" name="anypeli" placeholder="1980"><br>
+			<label>País: </label><input type="text" id="pais" name="pais" placeholder="País"><br>
+			<label>Animació</label><input type="radio" id="si" name="animacio">Si<input type="radio" id="no" name="animacio">No<br>
+			<label>Catala</label><input type="radio" id="si" name="catala">Si<input type="radio" id="no" name="catala">No<br>
+			<label>Puntuació: </label><input type="number" id="punts" name="punts" placeholder="1-10"><br>
+			<textarea id="observacions" name="observacions" cols="60" rows="5" placeholder="Comenta el que vulguis de la pel·licula"></textarea><br>
+
+			<label>Puja la imatge de la caràtula de la pel·lícula aquí: </label><input type="file" id="cover" name="cover" accept="image/png, image/jpg, image/jpeg"><br>
+
+			<input type="submit" id="envia" name="envia" value="Crear">
+			<input type="reset" id="cancel" name="cancel" value="Cancel·lar">
+		</form>
+	</section>
+	<footer></footer>
+</body>
+</html>
