@@ -14,7 +14,7 @@
 
 
 	<!-- Enllaç a Javascript Extern -->
-	<script  type="text/javascript" src="js/javascript.js"></script>
+	<script  type="text/javascript" src="js/validador-javascript.js"></script>
 
 
 
@@ -29,19 +29,32 @@
 
 	</header>
 	<section>
-		<form id="formulari" action="pellicules_add.php" method="POST" enctype="multipart/form-data">   <!-- enctype permet enviar fichers al formulari -->
-			<label>Títol: </label><input type="text" id="titol" name="titol" placeholder="Títol de la pel·lícula"><br>
-			<label>Director: </label><input type="text" id="director" name="director" placeholder="Nom del director de la pel·lícula"><br>
-			<label>Any: </label><input type="number" id="anypeli" name="anypeli" placeholder="1980"><br>
-			<label>País: </label><input type="text" id="pais" name="pais" placeholder="País"><br>
+		<form id="formulari" onsubmit="return valida_form();" action="php/pellicules_add.php" method="POST" enctype="multipart/form-data">   <!-- enctype permet enviar fichers al formulari -->
+			<div>
+			<label>Títol: </label><input type="text" id="titol" name="titol" placeholder="Títol de la pel·lícula" onblur="valida_titol();">
+			<span class="error" id="missatge-titol"></span>
+			</div>
+			<div>
+			<label>Director: </label><input type="text" id="director" name="director" placeholder="Nom del director de la pel·lícula" onblur="valida_director();">
+			<span class="error" id="missatge-director"></span>
+			</div>
+			<div>
+			<label>Any: </label><input type="number" id="any" name="any" placeholder="1980" onblur="valida_any();">
+			<span class="error" id="missatge-any"></span>
+			</div>
+			<div>
+			<label>País: </label><input type="text" id="pais" name="pais" placeholder="País" onblur="valida_pais();">
+			<span class="error" id="missatge-pais"></span>
+			</div>
 			<label>Animació</label><input type="radio" id="si" name="animacio">Si<input type="radio" id="no" name="animacio">No<br>
 			<label>Catala</label><input type="radio" id="si" name="catala">Si<input type="radio" id="no" name="catala">No<br>
-			<label>Puntuació: </label><input type="number" id="punts" name="punts" placeholder="1-10"><br>
+			<div>
+			<label>Puntuació: </label><input type="number" id="puntuacio" name="puntuacio" placeholder="1-10" onblur="valida_puntuacio();">
+			<span class="error" id="missatge-puntuacio"></span>
+			</div>
 			<textarea id="observacions" name="observacions" cols="60" rows="5" placeholder="Comenta el que vulguis de la pel·licula"></textarea><br>
-
-			<label>Puja la imatge de la caràtula de la pel·lícula aquí: </label><input type="file" id="cover" name="cover" accept="image/png, image/jpg, image/jpeg"><br>
-
-			<input type="submit" id="envia" name="envia" value="Crear">
+			<label>Puja la imatge de la caràtula de la pel·lícula aquí: </label><input type="file" id="imatge" name="imatge" accept="image/png, image/jpg, image/jpeg"><br>
+			<input type="submit" id="crea" name="crea" value="Crear">
 			<input type="reset" id="cancel" name="cancel" value="Cancel·lar">
 		</form>
 	</section>

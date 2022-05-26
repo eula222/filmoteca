@@ -21,7 +21,7 @@
   $observacions = $_POST["observacions"];
   //consulta
   //INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...);
-  $sql = "INSERT INTO $taula (titol, director, any, pais, puntuacio) VALUES ('$titol', '$director', '$any', '$pais', '$puntuacio')";
+  $sql = "INSERT INTO $taula (titol, director, any, pais, puntuacio, catala, animacio, observacions) VALUES ('$titol', '$director', '$any', '$pais', '$puntuacio', '$catala', '$animacio', '$observacions')";
   $sql_id = "SELECT * FROM $taula ORDER BY id DESC LIMIT 1"; //per saber el nom de la imatge
   //fem la connexió
   $conn = new mysqli($servidor, $usuari, $contrasenya, $basededades);
@@ -51,11 +51,13 @@
   $ruta_temporal = $_FILES['imatge']['tmp_name'];
   //comprovo características
   if (!(strpos($tipus_arxiu, "jpeg")) && ($tamany_arxiu < $tamany_max)) {
-     	echo "Extensió o tamany de la imatge incorrecte.";
+     	echo "Extensió o tamany de la imatge incorrecte, o no has seleccionat imatge. Es mostrarà sense imatge";
+      header( "Refresh:5; url=..", true, 303);
   }else{
      	if (move_uploaded_file($ruta_temporal, $ruta_desti)){
         		echo "L'arxiu s'ha carregat correctament.";
-            header("Location: ..");
+            header( "Refresh:5; url=..", true, 303);
+            //header("Location: ..");
             die();
      	}else{
         		echo "Error fatal al pujar l'arxiu.";

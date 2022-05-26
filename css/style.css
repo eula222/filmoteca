@@ -15,7 +15,7 @@ article img{
   width:95%;
 }
 
-#icongoogle{
+.icon{
   width:30px;
 }
 #contentpuntuacio img{
@@ -89,13 +89,15 @@ p{
 
 /*FI SLIDER*/
 
+/* -----------------fi css del index.html    ----------------*/
 
 /*pagina video*/
+
 
 /*pagina formulari*/
 #formulari{
   background-color: #f28510;
-  margin-top:200px;
+  margin-top:150px;
   padding: 30px;
 }
 #formulari label{
@@ -103,6 +105,34 @@ p{
     font-size: 20px;
 }
 /*com que el input file fa un boto amb text castella, li posem aquest pseudo element per taparho i que sigui en catala*/
-#cover {position: relative; width: 200px; height: 50px; margin-top: 20px;}
-#cover::after {content: 'Pujar fitxer'; width: auto; background-color: #c72e02; color: white; position: absolute; inset: 0 0 0 0; font-size: 16px; font-weight: 700; display: flex; justify-content: center; align-items: center; line-height: 4; border-radius: 4px;}
-#cover:hover::after {background-color: #f99f9f; color: #520505; cursor: pointer;}
+#imatge {position: relative; width: 200px; height: 50px; margin-top: 20px;}
+#imatge::after {content: 'Pujar fitxer'; width: auto; background-color: #c72e02; color: white; position: absolute; inset: 0 0 0 0; font-size: 16px; font-weight: 700; display: flex; justify-content: center; align-items: center; line-height: 4; border-radius: 4px;}
+#imatge:hover::after {background-color: #f99f9f; color: #520505; cursor: pointer;}
+
+input[type="text"]{
+  width:200px;
+  padding:5px 15px;
+  margin:5px;
+}
+input[type="number"]{
+  width:50px;
+  padding:5px 15px;
+  margin:5px;
+}
+.error{
+  height:1em;
+  color:white;
+  font-size: 0.8em;
+}
+input[type="submit"],input[type="reset"]{
+  color:white;
+  font-weight: bold;
+  margin:10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+input[type="submit"]{
+  background-color: #228B22;
+}
+input[type="reset"]{
+  background-color: #FF0000;
