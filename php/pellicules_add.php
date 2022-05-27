@@ -50,7 +50,7 @@
   $tamany_max = 5242880;
   $ruta_temporal = $_FILES['imatge']['tmp_name'];
   //comprovo características
-  if (!(strpos($tipus_arxiu, "jpeg")) && ($tamany_arxiu < $tamany_max)) {
+  if (!(strpos($tipus_arxiu, "jpeg")) || ($tamany_arxiu > $tamany_max)) {
      	echo "Extensió o tamany de la imatge incorrecte, o no has seleccionat imatge. Es mostrarà sense imatge";
       header( "Refresh:5; url=..", true, 303);
   }else{
